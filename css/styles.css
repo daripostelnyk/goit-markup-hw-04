@@ -164,6 +164,7 @@ button {
 }
 
 .container-first-section {
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,6 +234,16 @@ button {
     width: calc((100% - 72px) / 4);
 }
 
+.features-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+}
 
 .list-title {
     font-weight: 500;
@@ -306,18 +317,31 @@ button {
     text-align: center;
 }
 
+/* links */
+
+.team-links-block {
+    padding-top: 8px;
+}
+
+
+
 .team-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
-    margin-top: 8px;
 }
 
-.icons {
-    position: relative;
+.team-links-item {
     width: 40px;
     height: 40px;
+}
+
+.icons {display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
     background-color: #4D5AE5;
     border-radius: 50%;
     transition: background-color 250ms 
@@ -325,10 +349,6 @@ button {
 }
 
 .icon-item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     fill: #F4F4FD;
 }
 
@@ -360,7 +380,6 @@ button {
 
 .section-portfolio{
     display: flex;
-    justify-content: center;
     gap: 24px;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -410,26 +429,23 @@ button {
     overflow: hidden;
 }
 
-.thumb:hover .section-overlay {
-    transform: translateY(0);
-}
-
-.section-overlay {
-    display: block;
-    background-color: #4D5AE5;
-    padding: 40px 32px 164px;
+.thumb .section-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: #4D5AE5;
+    padding: 40px 32px;
     transform: translateY(100%);
-    transition: transform 250ms 
-    cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thumb:hover .section-overlay {
+    transform: translateY(0);
 }
 
 .text-overlay {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
