@@ -99,7 +99,7 @@ button {
     position: relative;
 }
 
-.link-nav.current::before {
+.link-nav.current::after {
     content: '';
 
     position: absolute;
@@ -152,6 +152,7 @@ button {
 
 /* #region first page */
 .first-section {
+    max-width: 1440px;
     background-color: #2e2f42;
     padding-top: 188px;
     padding-bottom: 188px;
